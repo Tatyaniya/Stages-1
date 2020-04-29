@@ -1,0 +1,173 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+h3, p {
+    margin: 0;
+}
+
+.stages1__title {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 45px;
+}
+
+.stages1__container {
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 33px auto;
+}
+
+.stages1__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 58px;
+}
+
+.stages1__item {
+    width: 367px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 43px;
+    padding-bottom: 43px;
+    position: relative;
+}
+
+.stages1__item:before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 180px;
+    background: #aaaeaf;
+    position: absolute;
+    top: 52px;
+}
+
+.stages1__item:first-child {
+    margin-left: 93px;
+    /*margin-bottom: 35px;*/
+}
+
+.stages1__item:nth-child(2) {
+    order: 3;
+    margin-left: 277px;
+}
+
+.stages1__item:nth-child(3) {
+    order: 1;
+}
+
+.stages1__item:nth-child(4) {
+    order: 4;
+}
+
+.stages1__item:nth-child(5) {
+    order: 2;
+}
+
+.stages1__item:last-child {
+    width: 186px;
+    order: 5;
+}
+
+.stages1__num {
+    margin-bottom: 43px;
+}
+
+.stages1__date {
+    margin-bottom: 13px;
+}
+
+.stages1__decor {
+   width: 170px;
+   height: 34px;
+   background: #aaaeaf; 
+   position: absolute;
+   top: 100%;
+   left: -93px;
+}
+
+.stages1__item:nth-child(2n) .stages1__decor{
+    top: 0;
+}
+
+.stages1__decor:before,
+.stages1__decor:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+	border-top: 17px solid transparent;
+	border-bottom: 17px solid transparent;
+    position: absolute;
+}
+
+.stages1__decor:before {
+    border-left: 15px solid #fff;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.stages1__decor:after {
+    border-left: 15px solid #aaaeaf;
+    top: 0;
+    right: -15px;
+    z-index: 5;
+}
+
+.stages1__round {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 8px solid #fff;
+    margin: 4px 80px;
+    opacity: 0;
+}
+
+/*************************  hover  **************************/ 
+.stages1__item:hover .stages1__num,
+.stages1__item:hover:before,
+.stages1__item:hover .stages1__decor,
+.stages1__item:hover .stages1__decor:after,
+.stages1__item:hover .stages1__round,
+.stages1__item:not(:hover) .stages1__num,
+.stages1__item:not(:hover):before,
+.stages1__item:not(:hover) .stages1__decor,
+.stages1__item:not(:hover) .stages1__decor:after,
+.stages1__item:not(:hover) .stages1__round {
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.stages1__item:hover .stages1__num {
+    color: #ffc776;
+}
+
+.stages1__item:hover:before,
+.stages1__item:hover .stages1__decor {
+    background: #ffa300;
+}
+
+.stages1__item:hover .stages1__decor:after {
+    border-left: 15px solid #ffa300;
+}
+
+.stages1__item:hover .stages1__round {
+    opacity: 1;
+}
+
+/*************************  hover end  **************************/
+
+.stages1__prompt {
+    text-align: center;
+}
